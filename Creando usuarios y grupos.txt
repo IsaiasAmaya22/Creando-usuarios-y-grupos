@@ -1,0 +1,31 @@
+root@isaias22:/home/isaias# /sbin/useradd jose
+root@isaias22:/home/isaias# cat /etc/passwd
+jose:x:1001: :/home/jose:/bin/sh
+root@isaias22:/home/isaias#passwd jose
+root@isaias22:/home/isaias# /sbin/useradd reina
+root@isaias22:/home/isaias# cat /etc/passwd
+reina:x1002: :/home/reina:/bin/sh
+root@isaias22:/home/isaias# passwd reina
+
+root@isaias22:/home/isaias# /sbin/adduser jose casa
+añadiendo al usuario jose al grupo casa
+hecho
+root@isaias22:/home/isaias#
+
+root@isaias22:/home/isaias# /sbin/adduser reina casa
+añadiendo al usuario reina al grupo casa
+hecho
+
+root@isaias22:/home/isaias# /sbin/groupmod
+root@isaias22:/home/isaias# /sbin/groupmod famlia
+root@isaias22:/home/isaias# /sbin/groupmod -1003 -n familia casa
+
+root@isaias22:/home/isaias# cat/etc/group
+
+jose:x:1001:
+reina:x:1002:
+familia:x:1003:jose,reina
+
+root@isaias22:/home/isaias#
+
+
